@@ -13,12 +13,12 @@ VALUES ( "Manager", 150000,1),
        ( "Senior",140000,2);
 
        
-INSERT INTO employee ( first_name, last_name, role_id, manager_id)
-VALUES ("Jhon", "Smith",3,null),
-       ("Frank","Weaver",2,null),
-       ("Tracy", "Langston",1,null),
-       ("Chaya","Lock",3,null),
-       ("Fred","Ocean",4,null),
-       ("Jeremy", "Michaels",2,null),
-       ("Andres","Hernandez",1, null);
+INSERT INTO employee ( first_name, last_name, role_id, manager_id,is_Manager)
+VALUES ("Jhon", "Smith",3,null,false),
+       ("Frank","Weaver",2,null,false),
+       ("Tracy", "Langston",1,null,true),
+       ("Chaya","Lock",3,null,false),
+       ("Fred","Ocean",4,null,false),
+       ("Jeremy", "Michaels",2,null,false),
+       ("Andres","Hernandez",1, null,true);
        

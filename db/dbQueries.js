@@ -13,6 +13,9 @@ class DB{
     showRole(){
         return this.connection.query("SELECT * FROM role;");
     }
+    // getRole(name){
+    //     return this.connection.query("SELECT role.id FROM role where role.title = "+name);
+    // }
     insertDepartment(name){
         return this.connection.query("INSERT INTO department (name) VALUES ('"+name+"')");
         
@@ -28,7 +31,9 @@ class DB{
         this.connection.query("UPDATE employee SET role_id ="+role+" WHERE id = "+id);
         return this.connection.query("SELECT first_name FROM employee WHERE id="+id);
     }
-
+    getManagers(){
+        return this.connection.query("SELECT employee.first_name, employee.last_name, employee.id FROM employee WHERE is_manager = 1");
+    }
 }
 
 module.exports = new DB(connection);
